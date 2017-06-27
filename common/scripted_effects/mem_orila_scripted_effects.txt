@@ -1,0 +1,36 @@
+# Checks if Ancient_Protectors country (global event target) exists
+# Creates the country and saves it if it does not
+create_mem_ancient_protector_country = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:mem_ancient_protector_country
+			}
+		}
+		create_country = {
+			name = "NAME_Ancient_Protectors"
+			name_list = "PRT1"
+			species = random
+			type = mem_ancient_protectors
+			flag = {
+				icon = {
+					category = "blocky"
+					file = "flag_blocky_22.dds"
+				}
+				background= {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors={
+					"grey"
+					"grey"
+					"null"
+					"null"
+				}
+			}
+		}
+		last_created_country = {
+			save_global_event_target_as = mem_ancient_protector_country
+		}
+	}
+}

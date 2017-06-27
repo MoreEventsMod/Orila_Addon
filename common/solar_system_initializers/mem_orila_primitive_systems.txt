@@ -1,0 +1,750 @@
+### MEM - More Home Systems Adaptations
+mem_orila_primitive_system_ikor = {
+	name = "Ikor"
+	class = "sc_g"
+	asteroids_distance = 150
+	
+	flags = { mem_orila_primitive_system ikor_system }
+	
+	change_orbit = 15
+	
+	planet = {
+		name = "Ikara"
+		class = "pc_m_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 5
+		has_ring = no
+	}
+	
+	change_orbit = 0
+	
+	planet = {
+		name = "Ikor"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 20
+		has_ring = no
+	}
+
+	planet = {
+		name = "Katarius"
+		orbit_distance = 40
+		class = "pc_desert"
+		orbit_angle = random
+		size = { min = 15 max = 19 }
+		modifiers = none
+		#tile_blockers = none
+		
+		init_effect = {
+			random_list = {
+				40 = {
+					change_pc = "pc_desert"
+				}
+				30 = {
+					change_pc = "pc_arid"
+				}
+				30 = {
+					change_pc = "pc_savannah"
+				}
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_deep_sinkhole"
+				add_resource = {
+					resource = engineering_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_quicksand_basin"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_dangerous_wildlife"
+				add_resource = {
+					resource = society_research
+					amount = 2
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_quicksand_basin"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_quicksand_basin"				
+			}
+			prevent_anomaly = yes
+			create_species = {
+				name = random
+				class = random
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = random_traits
+				}
+			}
+			create_country = {
+				name = random
+				authority = random
+				civics = {
+					civic = civic_landed_nobility
+					civic = civic_flat_world_theory
+				}
+				species = last_created
+				ethos = random
+				flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"turquoise"
+						"green"
+						"null"
+						"null"
+					}
+				}
+				type = primitive
+			}
+			last_created_country = {
+				set_graphical_culture = preindustrial_01
+				set_country_flag = stone_age 
+				set_primitive_age = stone_age
+				change_government = {
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+				}
+			}
+			create_colony = {
+				owner = last_created_country
+				species = last_created
+				ethos = owner
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = last_created
+				}
+			}
+			random_tile = {
+				limit = { has_building = "building_colony_shelter" }
+				remove_building = yes
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+					has_building = no
+				}
+				set_building = "building_mem_planetary_shield_generator_orila"
+			}
+			last_created_country = {
+				PREV = {
+					create_army = {
+						name = "NAME_Primitive_Army"
+						owner = last_created
+						species = last_created
+						type = "primitive_army"
+					}
+				}
+				break = yes
+			}
+			set_name = "Katarius"
+		}
+		moon = {
+			name = "Kataris"
+			class = "pc_barren"
+			size = 3
+			orbit_distance = 10
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Ikaan"
+		class = pc_continental
+		orbit_distance = 25
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_active_volcano"
+				add_resource = {
+					resource = engineering_research
+					amount = 2
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mountain_range"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_dangerous_wildlife"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_dangerous_wildlife"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mountain_range"				
+			}
+		}
+		init_effect = {
+			create_species = {
+				name = "Imari"
+				class = AVI
+				portrait = avi11
+				homeworld = THIS
+				traits = {
+					trait = random_traits
+				}
+			}
+			create_country = {
+				name = random
+				authority = random
+				civics = {
+					civic = civic_landed_nobility
+					civic = civic_flat_world_theory
+				}
+				species = last_created
+				ethos = random
+				flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"turquoise"
+						"green"
+						"null"
+						"null"
+					}
+				}
+				type = primitive
+			}
+			last_created_country = {
+				set_graphical_culture = preindustrial_01
+				set_country_flag = renaissance_age 
+				set_primitive_age = renaissance_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"pink"
+						"burgundy"
+						"null"
+						"null"
+					}
+				}
+			}
+			create_colony = {
+				owner = last_created_country
+				species = last_created
+				ethos = owner
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = last_created
+				}
+			}
+			if = {
+				limit = {
+					last_created_country = {
+						OR = {
+							has_country_flag = steam_age
+							has_country_flag = renaissance_age
+						}
+					}
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+						has_grown_pop = no
+						has_growing_pop = no
+					}
+					create_pop = {
+						species = last_created
+					}
+				}						
+			}
+			random_tile = {
+				limit = { has_building = "building_colony_shelter" }
+				remove_building = yes
+			}					
+			while = {
+				count = 2
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						has_grown_pop = yes
+					}
+					set_building = "building_primitive_farm"										
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					last_created_country = {
+						OR = {
+							has_country_flag = iron_age 
+							has_country_flag = late_medieval_age 									
+							has_country_flag = renaissance_age
+							has_country_flag = steam_age
+						}
+					}
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+						has_grown_pop = no
+						has_growing_pop = no
+					}
+					create_pop = {
+						species = last_created
+					}
+				}						
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						has_grown_pop = yes
+					}
+					set_building = "building_primitive_farm"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}
+				}						
+			}					
+			if = {
+				limit = {
+					last_created_country = {
+						OR = {
+							has_country_flag = steam_age
+							has_country_flag = renaissance_age
+						}
+					}
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						has_grown_pop = yes
+					}
+					set_building = "building_primitive_farm"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}
+				}						
+			}	
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+					has_building = no
+				}
+				set_building = "building_mem_planetary_shield_generator_orila"
+			}
+			last_created_country = {
+				PREV = {
+					while = {
+						count = 4
+						create_army = {
+							name = "NAME_Primitive_Army"
+							owner = last_created
+							species = last_created
+							type = "primitive_army"
+						}
+					}
+				}
+				break = yes
+			}
+			set_name = "Ikaan"
+		}
+	}
+	
+	
+	
+	planet = {
+		name = "Karatar"
+		class = "pc_gas_giant"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 25
+		starting_planet = no
+		has_ring = no
+		modifiers = none
+		
+		moon = {
+			name = "Inarias"
+			class = "pc_toxic"
+			size = 4
+			orbit_distance = 12
+			orbit_angle = random
+			has_ring = no
+		}
+		moon = {
+			name = "Inarius"
+			class = "pc_desert"
+			orbit_distance = 6
+			orbit_angle = random
+			size = { min = 15 max = 19 }
+			starting_planet = no
+			has_ring = no
+			modifiers = none
+			init_effect = {
+				random_list = {
+					40 = {
+						change_pc = "pc_tundra"
+					}
+					30 = {
+						change_pc = "pc_arctic"
+					}
+					30 = {
+						change_pc = "pc_alpine"
+					}
+				}
+				prevent_anomaly = yes
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+					add_resource = {
+						resource = engineering_research
+						amount = 2
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_massive_glacier"
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+					add_resource = {
+						resource = society_research
+						amount = 1
+						replace = yes
+					}				
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+					add_resource = {
+						resource = energy
+						amount = 2
+						replace = yes
+					}					
+				}
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_massive_glacier"				
+				}
+			}
+			init_effect = {
+				create_species = {
+					name = random
+					class = random
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = random_traits
+					}
+				}
+				create_country = {
+					name = random
+					authority = random
+					civics = {
+						civic = civic_landed_nobility
+						civic = civic_flat_world_theory
+					}
+					species = last_created
+					ethos = random
+					flag = {
+						icon = {
+							category = "special"
+							file = "primitive.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "new_dawn.dds"
+						}
+						colors={
+							"turquoise"
+							"green"
+							"null"
+							"null"
+						}
+					}
+					type = primitive
+				}
+				last_created_country = {
+					set_graphical_culture = preindustrial_01
+					set_country_flag = iron_age 
+					set_primitive_age = iron_age
+					change_country_flag = {
+						icon = {
+							category = "special"
+							file = "primitive.dds"
+						}
+						background= {
+							category = "backgrounds"
+							file = "new_dawn.dds"
+						}
+						colors={
+							"purple"
+							"dark_purple"
+							"null"
+							"null"
+						}
+					}
+				}
+				create_colony = {
+					owner = last_created_country
+					species = last_created
+					ethos = owner
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+						has_grown_pop = no
+						has_growing_pop = no
+					}
+					create_pop = {
+						species = last_created
+					}
+				}
+				random_tile = {
+					limit = { has_building = "building_colony_shelter" }
+					remove_building = yes
+				}					
+				while = {
+					count = 2
+					random_tile = {
+						limit = { 
+							has_blocker = no 
+							has_building = no 
+							has_grown_pop = yes
+						}
+						set_building = "building_primitive_farm"										
+						add_resource = {
+							resource = food
+							amount = 1
+							replace = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						last_created_country = {
+							OR = {
+								has_country_flag = iron_age 
+								has_country_flag = late_medieval_age 									
+								has_country_flag = renaissance_age
+								has_country_flag = steam_age
+							}
+						}
+					}
+					random_tile = {
+						limit = {
+							has_blocker = no
+							has_grown_pop = no
+							has_growing_pop = no
+						}
+						create_pop = {
+							species = last_created
+						}
+					}						
+					random_tile = {
+						limit = { 
+							has_blocker = no 
+							has_building = no 
+							has_grown_pop = yes
+						}
+						set_building = "building_primitive_farm"
+						add_resource = {
+							resource = food
+							amount = 1
+							replace = yes
+						}
+					}						
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+						has_grown_pop = no
+						has_growing_pop = no
+						has_building = no
+					}
+					set_building = "building_mem_planetary_shield_generator_orila"
+				}
+				last_created_country = {
+					PREV = {
+						while = {
+							count = 2
+							create_army = {
+								name = "NAME_Primitive_Army"
+								owner = last_created
+								species = last_created
+								type = "primitive_army"
+							}
+						}
+					}
+					break = yes
+				}
+				set_name = "Inarius"
+				create_mem_ancient_protector_country = yes
+				event_target:mem_ancient_protector_country = {
+					create_fleet = {
+						effect = {
+							set_owner = prev
+							create_ship = {
+								name = random
+								design = "NAME_Reaper"
+								graphical_culture = fallen_empire_01
+							}
+							set_location = {
+								target = prevprev
+								distance = 10
+							}				
+						}
+					}
+				}
+			}
+		}
+		moon = {
+			name = "Itarius"
+			class = "pc_barren_cold"
+			size = 3
+			orbit_distance = 4
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 38
+		orbit_angle = random
+		size = 3
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 2
+		orbit_angle = random
+		size = 5
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 4
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 2
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		name = "Katas"
+		class = "pc_frozen"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 17
+		starting_planet = no
+		has_ring = no
+		modifiers = none
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			planet_event = { id = mem_planetary_shields.5 days = 1 }
+		}
+	}
+}
