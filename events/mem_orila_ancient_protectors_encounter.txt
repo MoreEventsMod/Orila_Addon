@@ -1,0 +1,94 @@
+namespace = mem_orila_ancient_protectors_encounter
+
+# First Contact Ancient Protectors
+country_event = {
+	id = mem_orila_ancient_protectors_encounter.1
+	title = mem_orila_ancient_protectors_encounter.1.name
+	desc = mem_orila_ancient_protectors_encounter.1.desc
+	picture = GFX_evt_star_chart
+	location = FROMFROMFROM
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_country_type = mem_ancient_protectors }
+		is_country_type = default
+		is_ai = no
+		NOT = { has_country_flag = mem_ancient_protectors_encountered }
+	}
+	
+	immediate = {
+		set_country_flag = mem_ancient_protectors_encountered
+		capital_scope = { save_event_target_as = pc_home }
+		from = {
+			enable_special_project = {
+				name = MEM_INVESTIGATE_ANCIENT_PROTECTORS
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = mem_orila_ancient_protectors_encounter.1.a
+		tooltip = {
+			enable_special_project = {
+				name = MEM_INVESTIGATE_ANCIENT_PROTECTORS
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
+	}
+}
+
+# Started by special project
+country_event = {
+	id = mem_orila_ancient_protectors_encounter.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = mem_ancient_protectors }
+			establish_communications_no_message = ROOT
+		}
+		country_event = { id = mem_orila_ancient_protectors_encounter.3 }
+	}
+}
+
+country_event = {
+	id = mem_orila_ancient_protectors_encounter.3
+	title = mem_orila_ancient_protectors_encounter.3.name
+	desc = mem_orila_ancient_protectors_encounter.3.desc
+	picture = GFX_evt_fleet_evil
+	show_sound = event_space_amoeba
+	location = fromfromfrom
+
+	is_triggered_only = yes
+	
+	option = {
+		name = mem_orila_ancient_protectors_encounter.3.a
+		capital_scope = {
+			enable_special_project = {
+				name = MEM_ANCIENT_PROTECTORS_1_PROJECT
+				location = this
+				owner = root
+			}
+		}
+	}
+
+	option = {
+		name = mem_orila_ancient_protectors_encounter.3.b
+		trigger = {
+			NOR = {
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		begin_event_chain = {
+			event_chain = mem_ancient_protectors_1_chain
+			target = root
+		}
+	}
+}

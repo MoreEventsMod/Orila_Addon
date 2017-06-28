@@ -1,0 +1,6 @@
+# Triggered when two empires discover each other
+on_first_contact = {
+	events = {
+		mem_orila_ancient_protectors_encounter.1
+	}
+}

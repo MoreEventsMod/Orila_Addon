@@ -1,0 +1,50 @@
+# Investigate Space Amoeba
+special_project = {
+	key = MEM_INVESTIGATE_ANCIENT_PROTECTORS
+	picture = GFX_evt_star_chart
+	icon = gfx/interface/icons/situation_log/situation_log_radar.dds
+	cost = 60
+	tech_department = engineering_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = mem_orila_ancient_protectors_encounter.2 }
+		}
+	}
+
+	on_fail = {
+	}
+}
+
+special_project = {
+	key = MEM_ANCIENT_PROTECTORS_1_PROJECT
+	cost = 100
+	tech_department = engineering_technology
+	timelimit = -1
+	picture = GFX_evt_fleet_evil
+	icon = gfx/interface/icons/situation_log/situation_log_tick.dds
+	location = no
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	on_success = {
+		owner = { country_event = { id = mem_orila_ancient_protectors_encounter.4 } }
+	}
+
+	on_fail = {
+	}
+}

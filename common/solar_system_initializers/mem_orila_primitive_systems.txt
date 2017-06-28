@@ -173,6 +173,24 @@ mem_orila_primitive_system_ikor = {
 				break = yes
 			}
 			set_name = "Katarius"
+			create_mem_ancient_protector_country = yes
+			event_target:mem_ancient_protector_country = {
+				create_fleet = {
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_Reaper"
+							graphical_culture = fallen_empire_01
+						}
+						set_location = {
+							target = prevprev
+							distance = 5
+							angle = random
+						}				
+					}
+				}
+			}
 		}
 		moon = {
 			name = "Kataris"
@@ -428,6 +446,24 @@ mem_orila_primitive_system_ikor = {
 				break = yes
 			}
 			set_name = "Ikaan"
+			create_mem_ancient_protector_country = yes
+			event_target:mem_ancient_protector_country = {
+				create_fleet = {
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_Reaper"
+							graphical_culture = fallen_empire_01
+						}
+						set_location = {
+							target = prevprev
+							distance = 5
+							angle = random
+						}				
+					}
+				}
+			}
 		}
 	}
 	
@@ -673,7 +709,8 @@ mem_orila_primitive_system_ikor = {
 							}
 							set_location = {
 								target = prevprev
-								distance = 10
+								distance = 5
+								angle = random
 							}				
 						}
 					}
