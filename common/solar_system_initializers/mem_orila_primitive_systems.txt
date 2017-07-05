@@ -1,4 +1,7 @@
 ### MEM - More Home Systems Adaptations
+
+@base_moon_distance = 10
+
 mem_orila_primitive_system_ikor = {
 	name = "Ikor"
 	class = "sc_g"
@@ -1790,6 +1793,444 @@ mem_orila_primitive_system_reshtar = {
 		orbit_angle = random
 		size = { min = 1 max = 4 }
 		has_ring = no
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			planet_event = { id = mem_planetary_shields.5 days = 1 }
+		}
+	}
+}
+
+mem_orila_primitive_system_random = {
+	class = "rl_standard_stars"
+
+	flags = { mem_orila_primitive_system }
+	
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 0 max = 3 }
+	}
+	
+	change_orbit = 20
+	
+	planet = {
+		count = 1
+		orbit_distance = 0
+		class = "rl_habitable_normal"
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 12 max = 25 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			create_species = {
+				name = random
+				class = random
+				portrait = random
+				homeworld = THIS
+				traits = {
+					trait = random_traits
+				}
+			}
+			create_country = {
+				name = random
+				authority = random
+				civics = {
+					civic = civic_landed_nobility
+					civic = civic_flat_world_theory
+				}
+				species = last_created
+				ethos = random
+				flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"turquoise"
+						"green"
+						"null"
+						"null"
+					}
+				}
+				type = primitive
+			}
+			last_created_country = {
+				#to prevent them from developing on their own permanently
+				set_country_flag = recently_advanced
+				set_graphical_culture = preindustrial_01
+				random_list = {
+					20 = {
+						set_country_flag = stone_age 
+						set_primitive_age = stone_age
+						change_government = {
+							authority = random
+							civics = {
+								civic = civic_secret_of_fire
+								civic = civic_the_wheel
+							}
+						}
+					}
+					25 = {
+						set_country_flag = bronze_age 
+						set_primitive_age = bronze_age
+						change_government = {
+							authority = random
+							civics = {
+								civic = civic_secret_of_fire
+								civic = civic_the_wheel
+							}
+						}
+						change_country_flag = {
+							icon = {
+								category = "special"
+								file = "primitive.dds"
+							}
+							background= {
+								category = "backgrounds"
+								file = "new_dawn.dds"
+							}
+							colors={
+								"green"
+								"dark_green"
+								"null"
+								"null"
+							}
+						}
+					}
+					25 = {
+						set_country_flag = iron_age 
+						set_primitive_age = iron_age
+						change_country_flag = {
+							icon = {
+								category = "special"
+								file = "primitive.dds"
+							}
+							background= {
+								category = "backgrounds"
+								file = "new_dawn.dds"
+							}
+							colors={
+								"purple"
+								"dark_purple"
+								"null"
+								"null"
+							}
+						}
+					}
+					20 = {
+						set_country_flag = late_medieval_age 
+						set_primitive_age = late_medieval_age
+						change_country_flag = {
+							icon = {
+								category = "special"
+								file = "primitive.dds"
+							}
+							background= {
+								category = "backgrounds"
+								file = "new_dawn.dds"
+							}
+							colors={
+								"light_blue"
+								"blue"
+								"null"
+								"null"
+							}
+						}
+					}
+					10 = {
+						set_country_flag = renaissance_age 
+						set_primitive_age = renaissance_age
+						change_country_flag = {
+							icon = {
+								category = "special"
+								file = "primitive.dds"
+							}
+							background= {
+								category = "backgrounds"
+								file = "new_dawn.dds"
+							}
+							colors={
+								"pink"
+								"burgundy"
+								"null"
+								"null"
+							}
+						}
+					}
+				}
+			}
+			create_colony = {
+				owner = last_created_country
+				species = last_created
+				ethos = owner
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+				}
+				create_pop = {
+					species = last_created
+				}
+			}
+			if = {
+				limit = {
+					last_created_country = {
+						OR = {
+							has_country_flag = steam_age
+							has_country_flag = renaissance_age
+						}
+					}
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+						has_grown_pop = no
+						has_growing_pop = no
+					}
+					create_pop = {
+						species = last_created
+					}
+				}						
+			}
+			random_tile = {
+				limit = { has_building = "building_colony_shelter" }
+				remove_building = yes
+			}					
+			while = {
+				count = 2
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						has_grown_pop = yes
+					}
+					set_building = "building_primitive_farm"										
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					last_created_country = {
+						has_country_flag = stone_age
+					}
+				}	
+				every_tile = {
+					limit = {
+						has_building = "building_primitive_farm"
+					}
+					remove_building = yes
+				}
+			}
+			if = {
+				limit = {
+					last_created_country = {
+						OR = {
+							has_country_flag = iron_age 
+							has_country_flag = late_medieval_age 									
+							has_country_flag = renaissance_age
+							has_country_flag = steam_age
+						}
+					}
+				}
+				random_tile = {
+					limit = {
+						has_blocker = no
+						has_grown_pop = no
+						has_growing_pop = no
+					}
+					create_pop = {
+						species = last_created
+					}
+				}						
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						has_grown_pop = yes
+					}
+					set_building = "building_primitive_farm"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}
+				}						
+			}					
+			if = {
+				limit = {
+					last_created_country = {
+						OR = {
+							has_country_flag = steam_age
+							has_country_flag = renaissance_age
+						}
+					}
+				}
+				random_tile = {
+					limit = { 
+						has_blocker = no 
+						has_building = no 
+						has_grown_pop = yes
+					}
+					set_building = "building_primitive_farm"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}
+				}						
+			}
+			random_tile = {
+				limit = {
+					has_blocker = no
+					has_grown_pop = no
+					has_growing_pop = no
+					has_building = no
+				}
+				set_building = "building_mem_planetary_shield_generator_orila"
+			}
+			last_created_country = {
+				if = {
+					limit = { has_country_flag = stone_age }
+					PREV = {
+						create_army = {
+							name = "NAME_Primitive_Army"
+							owner = last_created
+							species = last_created
+							type = "primitive_army"
+						}
+					}
+					break = yes
+				}					
+				if = {
+					limit = { has_country_flag = bronze_age }
+					PREV = {
+						create_army = {
+							name = "NAME_Primitive_Army"
+							owner = last_created
+							species = last_created
+							type = "primitive_army"
+						}
+					}
+					break = yes
+				}
+				if = {
+					limit = { has_country_flag = iron_age }
+					PREV = {
+						while = {
+							count = 2
+							create_army = {
+								name = "NAME_Primitive_Army"
+								owner = last_created
+								species = last_created
+								type = "primitive_army"
+							}
+						}
+					}
+					break = yes
+				}
+				if = {
+					limit = { has_country_flag = late_medieval_age }
+					PREV = {
+						while = {
+							count = 3
+							create_army = {
+								name = "NAME_Primitive_Army"
+								owner = last_created
+								species = last_created
+								type = "primitive_army"
+							}
+						}
+					}
+					break = yes
+				}
+				if = {
+					limit = { has_country_flag = renaissance_age }
+					PREV = {
+						while = {
+							count = 4
+							create_army = {
+								name = "NAME_Primitive_Army"
+								owner = last_created
+								species = last_created
+								type = "primitive_army"
+							}
+						}
+					}
+					break = yes
+				}
+			}
+			set_planet_flag = mem_orila_primitive_world
+			#TODO CHANGE STATION WITH ORILA ONE
+			create_mem_ancient_protector_country = yes
+			event_target:mem_ancient_protector_country = {
+				create_fleet = {
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_Reaper"
+							graphical_culture = fallen_empire_01
+						}
+						set_location = {
+							target = prevprev
+							distance = 5
+							angle = random
+						}				
+					}
+				}
+			}
+			last_created_fleet = {
+				set_fleet_flag = mem_orila_ancient_protector_station
+			}
+		}
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 1 max = 4 }
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+		}
+	}
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 0 max = 2 }
 	}
 	
 	init_effect = {

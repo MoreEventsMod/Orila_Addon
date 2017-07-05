@@ -41,6 +41,173 @@ country_event = {
 	}
 }
 
+# Happens when a player visits a protected system for the first time
+ship_event = {
+	id = mem_orila_ancient_protectors_encounter.10
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			has_star_flag = mem_orila_primitive_system
+			any_ship_in_system = {
+				fleet = {
+					has_fleet_flag = mem_orila_ancient_protector_station
+				}
+			}
+			any_planet = {
+				has_building = building_mem_planetary_shield_generator_orila
+				exists = owner
+				owner = { 
+					is_country_type = primitive
+				}
+			}
+		}
+		owner = { 
+			NOR = {
+				is_ai = no
+				has_country_flag = mem_orila_primitive_system_visited
+			}
+		}
+	}
+	
+	immediate = {
+		# Player gets a flag for having visted on of the protected systems so he won't get greeted by the AI again
+		owner = { 
+			set_country_flag = mem_orila_primitive_system_visited
+		}
+		# This random list decides if this protected system will feature a special event like roque 
+		random_list = {
+			# Rogue AI Event Setup
+			20 = {
+				IF = {
+					limit = {
+						NOT = {
+							has_global_flag = mem_orila_ancient_protector_station_malfuction
+						}
+						FROM = {
+							NOR = {
+								has_star_flag = mem_orila_primitive_system_ikor
+								has_star_flag = mem_orila_primitive_system_visited
+							}
+						}
+					}
+					set_global_flag = mem_orila_ancient_protector_station_malfuction
+					owner = {
+						set_country_flag = mem_orila_ancient_protector_station_malfuction
+					}
+					FROM = {
+						random_system_planet = {
+							limit = {
+								has_building = building_mem_planetary_shield_generator_orila
+							}
+							set_planet_flag = mem_orila_ancient_protector_station_malfuction_planet
+						}
+					}
+				}
+			}
+			20 = {}
+			60 = {}
+		}
+		# First player has visited the system it gets flagged so no additional special events may happen here
+		FROM = {
+			set_star_flag = mem_orila_primitive_system_visited
+		}
+		# Followup event notifies the player of a transmission
+		ship_event = { id = mem_orila_ancient_protectors_encounter.11 days = 10 }
+	}
+}
+
+# Transmission from the Ancient Protector Station incoming
+ship_event = {
+	id = mem_orila_ancient_protectors_encounter.11
+	title = mem_orila_ancient_protectors_encounter.11.name
+	desc = mem_orila_ancient_protectors_encounter.11.desc
+	picture = GFX_evt_star_chart
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "ONSCREEN"
+		hidden_effect = {
+			owner = { country_event = { id = mem_orila_ancient_protectors_encounter.12 } }
+		}
+	}
+	option = {
+		name = mem_orila_ancient_protectors_encounter.10.b
+	}
+}
+
+# Ancient Protector Station Transmission
+country_event = {
+	id = mem_orila_ancient_protectors_encounter.12
+	title = "TRANSMISSION"
+	desc = mem_orila_ancient_protectors_encounter.12.desc
+	
+	diplomatic = yes
+	
+	picture_event_data = {
+		room = no_video_feed_room
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mem_orila_ancient_protectors_encounter.12.a
+		response_text = mem_orila_ancient_protectors_encounter.12.a.response
+		is_dialog_only = yes
+		trigger = {
+			NOT = {
+				has_country_flag = mem_orila_ancient_protector_station_malfuction
+			}
+		}
+	}
+	option = {
+		name = mem_orila_ancient_protectors_encounter.12.b
+		response_text = mem_orila_ancient_protectors_encounter.12.b.response
+		is_dialog_only = yes
+		trigger = {
+			NOT = {
+				has_country_flag = mem_orila_ancient_protector_station_malfuction
+			}
+		}
+	}
+	option = {
+		name = mem_orila_ancient_protectors_encounter.12.c
+		response_text = mem_orila_ancient_protectors_encounter.12.c.response
+		trigger = {
+			NOT = {
+				has_country_flag = mem_orila_ancient_protector_station_malfuction
+			}
+		}
+	}
+	option = {
+		name = mem_orila_ancient_protectors_encounter.12.d
+		response_text = mem_orila_ancient_protectors_encounter.12.d.response
+		is_dialog_only = yes
+		trigger = {
+			has_country_flag = mem_orila_ancient_protector_station_malfuction
+		}
+	}
+	option = {
+		name = mem_orila_ancient_protectors_encounter.12.e
+		response_text = mem_orila_ancient_protectors_encounter.12.e.response
+		is_dialog_only = yes
+		trigger = {
+			has_country_flag = mem_orila_ancient_protector_station_malfuction
+		}
+	}
+	option = {
+		name = mem_orila_ancient_protectors_encounter.12.f
+		response_text = mem_orila_ancient_protectors_encounter.12.f.response
+		trigger = {
+			has_country_flag = mem_orila_ancient_protector_station_malfuction
+		}
+	}
+}
+
 # Started by special project
 country_event = {
 	id = mem_orila_ancient_protectors_encounter.2
@@ -66,6 +233,7 @@ country_event = {
 
 	is_triggered_only = yes
 	
+	#Study them
 	option = {
 		name = mem_orila_ancient_protectors_encounter.3.a
 		capital_scope = {
@@ -76,7 +244,8 @@ country_event = {
 			}
 		}
 	}
-
+	
+	#Attack them
 	option = {
 		name = mem_orila_ancient_protectors_encounter.3.b
 		trigger = {
@@ -87,8 +256,9 @@ country_event = {
 			}
 		}
 		begin_event_chain = {
-			event_chain = mem_ancient_protectors_1_chain
+			event_chain = mem_orila_ancient_protectors_1_chain
 			target = root
 		}
 	}
 }
+

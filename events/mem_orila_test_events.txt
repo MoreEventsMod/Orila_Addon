@@ -24,6 +24,21 @@ country_event = {
 					max_distance = 30
 					initializer = "mem_orila_primitive_system_reshtar"
 				}
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					initializer = "mem_orila_primitive_system_random"
+				}
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					initializer = "mem_orila_primitive_system_random"
+				}
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					initializer = "mem_orila_primitive_system_random"
+				}
 			}
 		}
 	}

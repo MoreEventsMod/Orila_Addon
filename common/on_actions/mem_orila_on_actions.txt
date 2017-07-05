@@ -4,3 +4,23 @@ on_first_contact = {
 		mem_orila_ancient_protectors_encounter.1
 	}
 }
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		mem_orila_ancient_protectors_encounter.4
+	}
+}
+
+# Triggers event when ship enters a system
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system = {
+	events = {
+		mem_orila_ancient_protectors_encounter.10
+	}
+}
