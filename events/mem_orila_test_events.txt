@@ -40,8 +40,8 @@ country_event = {
 					initializer = "mem_orila_primitive_system_random"
 				}
 				spawn_system = {
-					min_distance = 30
-					max_distance = 40
+					min_distance = 10
+					max_distance = 30
 					initializer = "mem_orila_homesystem"
 				}
 			}
