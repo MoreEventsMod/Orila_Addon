@@ -9,37 +9,56 @@ country_event = {
 	immediate = {
 		capital_scope = {
 			solar_system = {
-				spawn_system = {
-					min_distance = 10
-					max_distance = 30
-					initializer = "mem_orila_primitive_system_ikor"
-				}
-				spawn_system = {
-					min_distance = 10
-					max_distance = 30
-					initializer = "mem_orila_primitive_system_qastliani"
-				}
-				spawn_system = {
-					min_distance = 10
-					max_distance = 30
-					initializer = "mem_orila_primitive_system_reshtar"
-				}
+				# spawn_system = {
+					# min_distance = 10
+					# max_distance = 30
+					# initializer = "mem_orila_primitive_system_ikor"
+				# }
+				# spawn_system = {
+					# min_distance = 10
+					# max_distance = 30
+					# initializer = "mem_orila_primitive_system_qastliani"
+				# }
+				# spawn_system = {
+					# min_distance = 10
+					# max_distance = 30
+					# initializer = "mem_orila_primitive_system_reshtar"
+				# }
+				# spawn_system = {
+					# min_distance = 10
+					# max_distance = 30
+					# initializer = "mem_orila_primitive_system_random"
+				# }
+				# spawn_system = {
+					# min_distance = 10
+					# max_distance = 30
+					# initializer = "mem_orila_primitive_system_random"
+				# }
 				spawn_system = {
 					min_distance = 10
 					max_distance = 30
 					initializer = "mem_orila_primitive_system_random"
 				}
 				spawn_system = {
-					min_distance = 10
-					max_distance = 30
-					initializer = "mem_orila_primitive_system_random"
-				}
-				spawn_system = {
-					min_distance = 10
-					max_distance = 30
-					initializer = "mem_orila_primitive_system_random"
+					min_distance = 30
+					max_distance = 40
+					initializer = "mem_orila_homesystem"
 				}
 			}
+		}
+	}
+}
+
+country_event = {
+	id = mem_orila_test.2
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = { is_country_type = mem_orila }
+			establish_communications_no_message = ROOT
 		}
 	}
 }

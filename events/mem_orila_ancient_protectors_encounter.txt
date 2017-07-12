@@ -136,7 +136,7 @@ ship_event = {
 		}
 	}
 	option = {
-		name = mem_orila_ancient_protectors_encounter.10.b
+		name = mem_orila_ancient_protectors_encounter.11.b
 	}
 }
 

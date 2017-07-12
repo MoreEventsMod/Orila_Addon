@@ -1,0 +1,21 @@
+# Robot Armies
+mem_orila_robot_army = {
+	robotic = yes
+	damage = 2.5
+	health = 4.5
+	morale = 2.0
+	assault = yes
+	time = 90
+	maintenance = 1.0
+	icon_frame = 4
+	cost = {
+		minerals = 350
+		energy = 50
+	}
+	
+	potential = {
+		owner = {
+			is_country_type = mem_orila
+		}
+	}
+}

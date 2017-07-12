@@ -9,28 +9,107 @@ create_mem_ancient_protector_country = {
 		}
 		create_country = {
 			name = "NAME_Ancient_Protectors"
-			name_list = "PRT1"
+			name_list = "ORILA"
 			species = random
 			type = mem_ancient_protectors
 			flag = {
 				icon = {
 					category = "blocky"
-					file = "flag_blocky_22.dds"
+					file = "flag_blocky_16.dds"
 				}
-				background= {
+				background = {
 					category = "backgrounds"
-					file = "00_solid.dds"
+					file = "mem_orila_stripes.dds"
 				}
-				colors={
+				colors = {
 					"grey"
-					"grey"
+					"beige"
 					"null"
 					"null"
 				}
 			}
 		}
 		last_created_country = {
+			add_modifier = {
+				modifier = "mem_orila_border"	
+				days = -1
+			}
 			save_global_event_target_as = mem_ancient_protector_country
+		}
+	}
+}
+
+create_mem_orila_country = {
+	if = {
+		limit = {
+			NOT = {
+				exists = event_target:mem_orila_country
+			}
+		}
+		create_species = {
+			name = "Orila"
+			class = HUM
+			portrait = humanoid_04
+			traits = {
+				trait = trait_intelligent
+				trait = trait_natural_physicists
+				trait = trait_venerable
+				trait = trait_slow_breeders
+				trait = trait_weak
+			}
+			extra_trait_points = 3
+		}
+		create_country = {
+			name = "NAME_Council_of_Halissos"
+			name_list = "ORILA"
+			type = mem_orila
+			ignore_initial_colony_error = yes
+			authority = auth_democratic
+			civics = {
+				civic = civic_mem_orila_the_way
+				civic = civic_ancient_preservers
+			}
+			species = last_created
+			ethos = {
+				ethic = ethic_materialist
+				ethic = ethic_xenophile
+				ethic = ethic_pacifist
+			}
+			flag = {
+				icon = {
+					category = "blocky"
+					file = "flag_blocky_22.dds"
+				}
+				background = {
+					category = "backgrounds"
+					file = "mem_orila_stripes.dds"
+				}
+				colors = {
+					"grey"
+					"beige"
+					"null"
+					"null"
+				}
+			}
+			effect = {
+				set_country_flag = mem_orila_country	
+				add_minerals = 5000
+				add_energy = 5000		
+				# must initialize global designs here
+				add_global_ship_design = "Freki"
+				add_global_ship_design = "Geri"
+				add_global_ship_design = "Fenrir"
+				add_global_ship_design = "Sleipnir"
+				add_global_ship_design = "Midgard"		
+			}
+		}
+		last_created_country = {
+			set_graphical_culture = mem_ancient_01
+			add_modifier = {
+				modifier = "mem_orila_border"	
+				days = -1
+			}
+			save_global_event_target_as = mem_orila_country
 		}
 	}
 }

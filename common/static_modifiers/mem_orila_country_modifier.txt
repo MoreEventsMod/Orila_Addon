@@ -1,0 +1,3 @@
+mem_orila_border = {
+	country_border_mult = -0.75
+}

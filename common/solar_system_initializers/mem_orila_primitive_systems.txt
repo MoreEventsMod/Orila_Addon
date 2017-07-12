@@ -179,7 +179,6 @@ mem_orila_primitive_system_ikor = {
 			}
 			set_name = "Katarius"
 			set_planet_flag = mem_orila_primitive_world
-			#TODO CHANGE STATION WITH ORILA ONE
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
@@ -187,8 +186,8 @@ mem_orila_primitive_system_ikor = {
 						set_owner = prev
 						create_ship = {
 							name = random
-							design = "NAME_Reaper"
-							graphical_culture = fallen_empire_01
+							design = "Utgard"
+							graphical_culture = mem_ancient_01
 						}
 						set_location = {
 							target = prevprev
@@ -458,7 +457,6 @@ mem_orila_primitive_system_ikor = {
 			}
 			set_name = "Ikaan"
 			set_planet_flag = mem_orila_primitive_world
-			#TODO CHANGE STATION WITH ORILA ONE
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
@@ -466,8 +464,8 @@ mem_orila_primitive_system_ikor = {
 						set_owner = prev
 						create_ship = {
 							name = random
-							design = "NAME_Reaper"
-							graphical_culture = fallen_empire_01
+							design = "Utgard"
+							graphical_culture = mem_ancient_01
 						}
 						set_location = {
 							target = prevprev
@@ -716,7 +714,6 @@ mem_orila_primitive_system_ikor = {
 				}
 				set_name = "Inarius"
 				set_planet_flag = mem_orila_primitive_world
-				#TODO CHANGE STATION WITH ORILA ONE
 				create_mem_ancient_protector_country = yes
 				event_target:mem_ancient_protector_country = {
 					create_fleet = {
@@ -724,8 +721,8 @@ mem_orila_primitive_system_ikor = {
 							set_owner = prev
 							create_ship = {
 								name = random
-								design = "NAME_Reaper"
-								graphical_culture = fallen_empire_01
+								design = "Utgard"
+								graphical_culture = mem_ancient_01
 							}
 							set_location = {
 								target = prevprev
@@ -1184,7 +1181,6 @@ mem_orila_primitive_system_qastliani = {
 			}
 			set_name = "Qastinar"
 			set_planet_flag = mem_orila_primitive_world
-			#TODO CHANGE STATION WITH ORILA ONE
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
@@ -1192,8 +1188,8 @@ mem_orila_primitive_system_qastliani = {
 						set_owner = prev
 						create_ship = {
 							name = random
-							design = "NAME_Reaper"
-							graphical_culture = fallen_empire_01
+							design = "Utgard"
+							graphical_culture = mem_ancient_01
 						}
 						set_location = {
 							target = prevprev
@@ -1672,7 +1668,6 @@ mem_orila_primitive_system_reshtar = {
 			}
 			set_name = "Resheeta'Ar"
 			set_planet_flag = mem_orila_primitive_world
-			#TODO CHANGE STATION WITH ORILA ONE
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
@@ -1680,8 +1675,8 @@ mem_orila_primitive_system_reshtar = {
 						set_owner = prev
 						create_ship = {
 							name = random
-							design = "NAME_Reaper"
-							graphical_culture = fallen_empire_01
+							design = "Utgard"
+							graphical_culture = mem_ancient_01
 						}
 						set_location = {
 							target = prevprev
@@ -2182,7 +2177,6 @@ mem_orila_primitive_system_random = {
 				}
 			}
 			set_planet_flag = mem_orila_primitive_world
-			#TODO CHANGE STATION WITH ORILA ONE
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
@@ -2190,8 +2184,8 @@ mem_orila_primitive_system_random = {
 						set_owner = prev
 						create_ship = {
 							name = random
-							design = "NAME_Reaper"
-							graphical_culture = fallen_empire_01
+							design = "Utgard"
+							graphical_culture = mem_ancient_01
 						}
 						set_location = {
 							target = prevprev

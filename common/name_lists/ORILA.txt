@@ -1,0 +1,135 @@
+﻿### Orila
+ORILA = {
+	selectable = { always = no }
+	randomized = no
+	
+	### PLANETS
+
+#	trigger = {
+#		is_pirate = yes
+#	}
+
+	ship_names = {
+		generic = {
+		}
+		
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		wormhole_station = { }
+		#terraform_station = { }
+		observation_station = { }
+		
+		military_station_small = {
+		}
+
+		military_station_medium = {
+		}
+
+		military_station_large = {
+		}
+		
+		mining_station = { 
+			"Mining Outpost"
+		}
+		research_station = {
+			"Research Outpost"
+		}
+		
+		transport = {
+			"Warbot Carrier"
+		}
+		
+		constructor = {
+			"Manufacturer"
+		}
+		
+		colonizer = {
+			"Colonizer"
+		}
+		
+		science = {
+			"Explorer"
+		}
+		
+		mem_ancient_small_military_station = {
+			"Automated Outpost"
+		}
+		
+		mem_ancient_large_military_station = {
+			"Citadel"
+		}
+		
+		mem_ancient_combat_drone = {
+			"Autonomous Drone"
+		}
+		
+		mem_ancient_control_drone = {
+			"Autonomous Control Drone"
+		}
+		
+		mem_ancient_escort = {
+			"Stalwart Defender" "Stalwart Protector" "Stalwart Guardian" "Stalwart Warden" "Stalwart Custodian" "Stalwart Keeper" "Steadfast Defender" "Steadfast Protector" "Steadfast Guardian" "Steadfast Warden" "Steadfast Custodian" "Steadfast Keeper" "Staunch Defender" "Staunch Protector" "Staunch Guardian" "Staunch Warden" "Staunch Custodian" "Staunch Keeper" "Steady Defender" "Steady Protector" "Steady Guardian" "Steady Warden" "Steady Custodian" "Steady Keeper" "Unfaltering Defender" "Unfaltering Protector" "Unfaltering Guardian" "Unfaltering Warden" "Unfaltering Custodian" "Unfaltering Keeper" "Unwavering Defender" "Unwavering Protector" "Unwavering Guardian" "Unwavering Warden" "Unwavering Custodian" "Unwavering Keeper" "Unyielding Defender" "Unyielding Protector" "Unyielding Guardian" "Unyielding Warden" "Unyielding Custodian" "Unyielding Keeper" "Unrelenting Defender" "Unrelenting Protector" "Unrelenting Guardian" "Unrelenting Warden" "Unrelenting Custodian" "Unrelenting Keeper" "Resolute Defender" "Resolute Protector" "Resolute Guardian" "Resolute Warden" "Resolute Custodian" "Resolute Keeper" "Resolved Defender" "Resolved Protector" "Resolved Guardian" "Resolved Warden" "Resolved Custodian" "Resolved Keeper" "Firm Defender" "Firm Protector" "Firm Guardian" "Firm Warden" "Firm Custodian" "Firm Keeper"
+		}
+		
+		mem_ancient_cruiser = {
+			"Will of Harilla" "Defender of Harilla" "Protector of Harilla" "Guardian of Harilla" "Warden of Harilla" "Custodian of Harilla" "Keeper of Harilla" "Will of Halissos" "Defender of Halissos" "Protector of Halissos" "Guardian of Halissos" "Warden of Halissos" "Custodian of Halissos" "Keeper of Halissos" "Will of Athala" "Defender of Athala" "Protector of Athala" "Guardian of Athala" "Warden of Athala" "Custodian of Athala" "Keeper of Athala" "Will of Uralla" "Defender of Uralla" "Protector of Uralla" "Guardian of Uralla" "Warden of Uralla" "Custodian of Uralla" "Keeper of Uralla" "Will of Kathos" "Defender of Kathos" "Protector of Kathos" "Guardian of Kathos" "Warden of Kathos" "Custodian of Kathos" "Keeper of Kathos" "Will of Irella" "Defender of Irella" "Protector of Irella" "Guardian of Irella" "Warden of Irella" "Custodian of Irella" "Keeper of Irella" "Will of Karillar" "Defender of Karillar" "Protector of Karillar" "Guardian of Karillar" "Warden of Karillar" "Custodian of Karillar" "Keeper of Karillar" "Will of Kapillar" "Defender of Kapillar" "Protector of Kapillar" "Guardian of Kapillar" "Warden of Kapillar" "Custodian of Kapillar" "Keeper of Kapillar" "Will of Kapallur" "Defender of Kapallur" "Protector of Kapallur" "Guardian of Kapallur" "Warden of Kapallur" "Custodian of Kapallur" "Keeper of Kapallur"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+			"Blood Armada" "Dread Fleet" "Flotilla of Death" "Skull Armada" "Fleet of Doom" "Raider Flotilla" "Raiding Force"
+			"Pirate Squadron" "Dark Flotilla" "War Party" "Pirate Armada" "Pirate Flotilla" "Raiding Strike Force" "Blood Host"
+			"Hunting Squadron" "Hunting Pack" "Scourge of the Stars" "Black Flotilla" "Crimson Flotilla" "Stellar Marauders"
+		}
+	}
+	
+	army_names = {
+		mem_orila_robot_army = {
+			sequential_name = "%O% Warbot Detachment"
+		}
+	}
+
+	planet_names = {
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			full_names = {
+				Crossbones Smiler "Wild One" "Devil-that-flies" Flatnose "The Veteran" "Admiral Yellow" "Captain Death" "Colonel Pain"
+				"Bleedin' Qurob" "The Commodore" Gravedigger "Cursed One" "Bane of Civilization" Outrider "Green Demon" Facilitator
+				Scar "Fat Tirak" "The Teacher" "Red Belly" "Kid Rokka" "The Sheriff" "Gold Tooth" Destroyer-of-All "Citizen Jumbka"
+				Deadeye "Silver Eye" "The Savant" "Death's Breath" "Rikam the Drunkard" "The Wizard" "Slippery Luqav" "Chief Nozka"
+				"First Mate Tuwab" "Scourge of the Spacelanes" "The Hunter" "Warlord Gebban" "Big Thing" "Wild Eyes" "Sly Birpe"
+				"The Savage" "Doctor S" "Betak's Bastard"
+			}
+			
+			#full_names_male = { 
+			#	"The Baron" "Butcher King" "His Lordship" "Emperor of the Universe" "Crazy Helmsman" "Emperor Four-Eyes VII"
+			#}
+			#
+			#full_names_female
+			#	"The Midwife" "Blood Queen"
+			#}
+
+			first_names = {
+			}
+			
+			second_names = {
+			}
+		}
+	}
+}
