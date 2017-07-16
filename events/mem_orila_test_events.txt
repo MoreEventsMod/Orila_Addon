@@ -46,6 +46,21 @@ country_event = {
 				}
 			}
 		}
+		random_system = {
+			limit = {
+				has_star_flag = mem_orila_homesystem
+			}
+			spawn_system = {
+				min_distance = 30
+				max_distance = 50
+				initializer = "mem_orila_homesystem_neighbor_t1"
+			}
+			spawn_system = {
+				min_distance = 40
+				max_distance = 80
+				initializer = "mem_orila_homesystem_neighbor_t2"
+			}
+		}
 	}
 }
 

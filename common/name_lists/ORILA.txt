@@ -88,9 +88,7 @@ ORILA = {
 
 	fleet_names = {
 		random_names = {
-			"Blood Armada" "Dread Fleet" "Flotilla of Death" "Skull Armada" "Fleet of Doom" "Raider Flotilla" "Raiding Force"
-			"Pirate Squadron" "Dark Flotilla" "War Party" "Pirate Armada" "Pirate Flotilla" "Raiding Strike Force" "Blood Host"
-			"Hunting Squadron" "Hunting Pack" "Scourge of the Stars" "Black Flotilla" "Crimson Flotilla" "Stellar Marauders"
+			"Council Fleet"
 		}
 	}
 	
@@ -109,12 +107,7 @@ ORILA = {
 	character_names = {
 		default = {
 			full_names = {
-				Crossbones Smiler "Wild One" "Devil-that-flies" Flatnose "The Veteran" "Admiral Yellow" "Captain Death" "Colonel Pain"
-				"Bleedin' Qurob" "The Commodore" Gravedigger "Cursed One" "Bane of Civilization" Outrider "Green Demon" Facilitator
-				Scar "Fat Tirak" "The Teacher" "Red Belly" "Kid Rokka" "The Sheriff" "Gold Tooth" Destroyer-of-All "Citizen Jumbka"
-				Deadeye "Silver Eye" "The Savant" "Death's Breath" "Rikam the Drunkard" "The Wizard" "Slippery Luqav" "Chief Nozka"
-				"First Mate Tuwab" "Scourge of the Spacelanes" "The Hunter" "Warlord Gebban" "Big Thing" "Wild Eyes" "Sly Birpe"
-				"The Savage" "Doctor S" "Betak's Bastard"
+				"Chap'Lin" "Chap'Tin" "Chap'Len" "Chap'Ten" "Chap'Lan" "Chap'Len" "Tar'Lin" "Tar'Tin" "Tar'Len" "Tar'Ten" "Tar'Lan" "Tar'Len" "Nar'Lin" "Nar'Tin" "Nar'Len" "Nar'Ten" "Nar'Lan" "Nar'Len" "Char'Lin" "Char'Tin" "Char'Len" "Char'Ten" "Char'Lan" "Char'Len" "Or'Lin" "Or'Tin" "Or'Len" "Or'Ten" "Or'Lan" "Or'Len" "Har'Lin" "Har'Tin" "Har'Len" "Har'Ten" "Har'Lan" "Har'Len" "Hor'Lin" "Hor'Tin" "Hor'Len" "Hor'Ten" "Hor'Lan" "Hor'Len" "Var'Lin" "Var'Tin" "Var'Len" "Var'Ten" "Var'Lan" "Var'Len" "Vor'Lin" "Vor'Tin" "Vor'Len" "Vor'Ten" "Vor'Lan" "Vor'Len" "Tor'Lin" "Tor'Tin" "Tor'Len" "Tor'Ten" "Tor'Lan" "Tor'Len" "Nor'Lin" "Nor'Tin" "Nor'Len" "Nor'Ten" "Nor'Lan" "Nor'Len" "Ar'Lin" "Ar'Tin" "Ar'Len" "Ar'Ten" "Ar'Lan" "Ar'Len" "Chor'Lin" "Chor'Tin" "Chor'Len" "Chor'Ten" "Chor'Lan" "Chor'Len" "Chop'Lin" "Chop'Tin" "Chop'Len" "Chop'Ten" "Chop'Lan" "Chop'Len" "Chan'Lin" "Chan'Tin" "Chan'Len" "Chan'Ten" "Chan'Lan" "Chan'Len" "Chon'Lin" "Chon'Tin" "Chon'Len" "Chon'Ten" "Chon'Lan" "Chon'Len" "Chen'Lin" "Chen'Tin" "Chen'Len" "Chen'Ten" "Chen'Lan" "Chen'Len" "Ter'Lin" "Ter'Tin" "Ter'Len" "Ter'Ten" "Ter'Lan" "Ter'Len" "Ner'Lin" "Ner'Tin" "Ner'Len" "Ner'Ten" "Ner'Lan" "Ner'Len" "Cher'Lin" "Cher'Tin" "Cher'Len" "Cher'Ten" "Cher'Lan" "Cher'Len" "Er'Lin" "Er'Tin" "Er'Len" "Er'Ten" "Er'Lan" "Er'Len" "Her'Lin" "Her'Tin" "Her'Len" "Her'Ten" "Her'Lan" "Her'Len" "Ver'Lin" "Ver'Tin" "Ver'Len" "Ver'Ten" "Ver'Lan" "Ver'Len" "Chep'Lin" "Chep'Tin" "Chep'Len" "Chep'Ten" "Chep'Lan" "Chep'Len"
 			}
 			
 			#full_names_male = { 

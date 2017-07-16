@@ -182,6 +182,9 @@ mem_orila_primitive_system_ikor = {
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
+					settings = {
+						spawn_debris = no
+					}
 					effect = {
 						set_owner = prev
 						create_ship = {
@@ -460,6 +463,9 @@ mem_orila_primitive_system_ikor = {
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
+					settings = {
+						spawn_debris = no
+					}
 					effect = {
 						set_owner = prev
 						create_ship = {
@@ -717,6 +723,9 @@ mem_orila_primitive_system_ikor = {
 				create_mem_ancient_protector_country = yes
 				event_target:mem_ancient_protector_country = {
 					create_fleet = {
+						settings = {
+							spawn_debris = no
+						}
 						effect = {
 							set_owner = prev
 							create_ship = {
@@ -1184,6 +1193,9 @@ mem_orila_primitive_system_qastliani = {
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
+					settings = {
+						spawn_debris = no
+					}
 					effect = {
 						set_owner = prev
 						create_ship = {
@@ -1671,6 +1683,9 @@ mem_orila_primitive_system_reshtar = {
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
+					settings = {
+						spawn_debris = no
+					}
 					effect = {
 						set_owner = prev
 						create_ship = {
@@ -2180,6 +2195,9 @@ mem_orila_primitive_system_random = {
 			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
+					settings = {
+						spawn_debris = no
+					}
 					effect = {
 						set_owner = prev
 						create_ship = {

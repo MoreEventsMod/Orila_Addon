@@ -1,0 +1,47 @@
+mem_orila_ancient_preservers = {
+	aggressiveness = 0.5
+	trade_willingness = 0.95
+	bravery = 1.0
+
+	military_spending = 1.0
+	colony_spending = 1.0
+
+	federation_acceptance = 0
+	nap_acceptance = 50
+	defensive_pact_acceptance = 0
+	migration_pact_acceptance = 0
+
+	advanced_start_chance = 0
+
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.4
+	shields_ratio = 0.6
+
+	threat_modifier = 1.2
+	threat_others_modifier = 0.9
+	friction_modifier = 0.0
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = yes
+		opportunist = no
+		slaver = no
+		uplifter = yes
+		purger = no
+		dominator = no
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = yes
+		propagator = no
+		multispecies = yes
+	}
+
+	allow = {
+		is_country_type = mem_orila
+	}
+
+	weight_modifier = {
+		weight = 1000
+	}
+}

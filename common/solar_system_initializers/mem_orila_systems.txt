@@ -1,9 +1,12 @@
 ### More Events Mod, Extinct Abductors - Uplifter - Homesystem Fallen Empire Version
+
+@base_moon_distance = 10
+
 mem_orila_homesystem = {
 	name = "Halissos"
 	class = "sc_g"
 	
-	flags = { mem_orila_homesystem }
+	flags = { mem_orila_homesystem mem_orila_system }
 	
 	planet = {
 		name = "Halissos"
@@ -159,54 +162,54 @@ mem_orila_homesystem = {
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_dark_matter_power_plant"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = energy
+					resource = engineering_research
 					amount = 1
 					replace = yes
 				}	
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = engineering_research
 					amount = 1
 					replace = yes
 				}					
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = physics_research
 					amount = 1
 					replace = yes
 				}					
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = physics_research
 					amount = 1
 					replace = yes
 				}					
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = society_research
 					amount = 1
 					replace = yes
 				}					
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = society_research
 					amount = 1
 					replace = yes
 				}					
@@ -235,7 +238,7 @@ mem_orila_homesystem = {
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_clone_vats"
+				set_building = "building_mem_orila_cloning_lab"
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
@@ -504,45 +507,45 @@ mem_orila_homesystem = {
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = engineering_research
 					amount = 1
 					replace = yes
 				}					
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = engineering_research
 					amount = 1
 					replace = yes
 				}					
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = physics_research
 					amount = 1
 					replace = yes
 				}					
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = physics_research
 					amount = 1
 					replace = yes
 				}					
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_ancient_factory"
+				set_building = "building_mem_orila_lab"
 				add_resource = {
-					resource = minerals
+					resource = society_research
 					amount = 1
 					replace = yes
 				}					
@@ -553,7 +556,7 @@ mem_orila_homesystem = {
 			}
 			random_tile = {
 				limit = { has_building = no has_blocker = no }
-				set_building = "building_clone_vats"
+				set_building = "building_mem_orila_cloning_lab"
 			}
 			create_army = {
 				name = random
@@ -856,17 +859,430 @@ mem_orila_homesystem = {
 		}
 	}
 	
-	neighbor_system = {
-		distance = { min = 30 max = 70 }
-		initializer = "mem_orila_homesystem_neighbor_t1"
-	}
+#	neighbor_system = {
+#		distance = { min = 30 max = 50 }
+#		initializer = "mem_orila_homesystem_neighbor_t1"
+#	}
+#	neighbor_system = {
+#		distance = { min = 40 max = 80 }
+#		initializer = "mem_orila_homesystem_neighbor_t2"
+#	}
 }
 
 mem_orila_homesystem_neighbor_t1 = {
+	name = "Talissa"
+	class = "sc_k"
+	asteroids_distance = 90
+	flags = { mem_orila_system }
+	
+	planet = {
+		name = "Talissa"
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 25
+		has_ring = no
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	planet = {
+		orbit_distance = 35
+		count = { min = 1 max = 1 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			
+		}
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+	
+	planet = {
+		orbit_distance = 20
+		count = { min = 1 max = 2 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			
+		}
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_gaia"
+		orbit_distance = 50
+		orbit_angle = random
+		size = 15
+		has_ring = no
+		tile_blockers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			create_colony = {
+				owner = last_created_country
+				species = last_created
+				ethos = owner
+			}
+			random_tile = {
+				limit = { has_building = "building_colony_shelter" }
+				remove_building = yes
+			}
+			set_planet_flag = fallen_empire_world
+			create_pop = { 
+				species = owner_main_species
+			}
+			random_tile = {
+				limit = { has_pop = no has_building = no has_blocker = no num_adjacent_tiles > 3 }
+				create_pop = { 
+					species = owner_main_species
+				}
+				set_building = "building_capital_2"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}			
+			}
+			random_tile = {
+				limit = { has_pop = yes has_building = no has_blocker = no }
+				set_building = "building_mem_orila_cloning_lab"
+			}
+			random_tile = {
+				limit = { has_pop = yes has_building = no has_blocker = no }
+				set_building = "building_dark_matter_power_plant"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}	
+			}
+			random_tile = {
+				limit = { has_pop = no has_building = no has_blocker = no }
+				create_pop = { 
+					species = owner_main_species
+				}
+				set_building = "building_biolab_3"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}			
+			}
+			random_tile = {
+				limit = { has_pop = no has_building = no has_blocker = no }
+				create_pop = { 
+					species = owner_main_species
+				}
+				set_building = "building_biolab_3"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}			
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_agri_processing_complex"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_ancient_factory"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_building = no has_blocker = no }
+				set_building = "building_mem_planetary_shield_generator_orila"
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			build_pop = {
+				name = buildable_robot_pop_2
+			}
+			create_army = {
+				name = random
+				owner = last_created_country
+				type = "mem_orila_robot_army"
+			}
+			create_army = {
+				name = random
+				owner = last_created_country
+				type = "mem_orila_robot_army"
+			}
+			create_army = {
+				name = random
+				owner = last_created_country
+				type = "mem_orila_robot_army"
+			}
+			create_army = {
+				name = random
+				owner = last_created_country
+				type = "mem_orila_robot_army"
+			}
+			create_spaceport = {
+				owner = last_created_country
+				initial_module = "mem_orila_spaceport_weapon"
+			}
+			spaceport = {
+				set_spaceport_level = 6		
+				set_spaceport_module = {
+					slot = 1
+					module = "crew_quarters"
+				}	
+				set_spaceport_module = {
+					slot = 2
+					module = "fleet_academy"
+				}
+				set_spaceport_module = {
+					slot = 3
+					module = "synchronized_defenses"
+				}
+				set_spaceport_module = {
+					slot = 4
+					module = "engineering_bay"
+				}					
+			}
+			create_ambient_object = {
+				type = mem_planetary_shield_orila_ps_15
+				location = this
+			}
+			last_created_ambient_object = { 
+				set_location = prev
+				set_ambient_object_flag = mem_planetary_shield_03
+			}
+		}
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+	
+	planet = {
+		orbit_distance = 30
+		count = { min = 0 max = 1 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		change_orbit = @base_moon_distance
+		
+		moon = {
+			count = { min = 0 max = 1 }
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+	
+	planet = {
+		orbit_distance = 35
+		count = { min = 0 max = 1 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	
+	init_effect = {
+		random_system_planet = {
+			limit = {
+				is_star = yes
+			}
+			create_fleet = {
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = last_created_country
+					create_ship = {
+						name = random
+						design = "Midgard"
+						graphical_culture = last_created_country
+					}
+					set_location = {
+						target = PREV
+						distance = 250
+						angle = 120 
+					}
+				}
+			}
+			create_fleet = {
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = last_created_country
+					create_ship = {
+						name = random
+						design = "Midgard"
+						graphical_culture = last_created_country
+					}
+					set_location = {
+						target = PREV
+						distance = 250
+						angle = 240 
+					}
+				}
+			}
+			create_fleet = {
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = last_created_country
+					create_ship = {
+						name = random
+						design = "Midgard"
+						graphical_culture = last_created_country
+					}
+					set_location = {
+						target = PREV
+						distance = 250
+						angle = 360 
+					}
+				}
+			}
+		}
+	}
+}
+
+mem_orila_homesystem_neighbor_t2 = {
 	name = "Taranis"
 	class = "sc_g"
 	asteroids_distance = 45
-	flags = { mem_ea_uplifter_system_2 hostile_system }
+	flags = { mem_orila_primitive_system }
 	
 	planet = {
 		name = "Taranis"

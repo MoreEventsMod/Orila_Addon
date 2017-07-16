@@ -20,17 +20,17 @@ country_event = {
 	immediate = {
 		set_country_flag = mem_ancient_protectors_encountered
 		capital_scope = { save_event_target_as = pc_home }
-		from = {
-			enable_special_project = {
-				name = MEM_INVESTIGATE_ANCIENT_PROTECTORS
-				location = event_target:pc_home
-				owner = ROOT
-			}
-		}
+#		from = {
+#			enable_special_project = {
+#				name = MEM_INVESTIGATE_ANCIENT_PROTECTORS
+#				location = event_target:pc_home
+#				owner = ROOT
+#			}
+#		}
 	}
 	
 	option = {
-		name = mem_orila_ancient_protectors_encounter.1.a
+		name = INTERESTING
 		tooltip = {
 			enable_special_project = {
 				name = MEM_INVESTIGATE_ANCIENT_PROTECTORS
@@ -122,7 +122,7 @@ ship_event = {
 # Transmission from the Ancient Protector Station incoming
 ship_event = {
 	id = mem_orila_ancient_protectors_encounter.11
-	title = mem_orila_ancient_protectors_encounter.11.name
+	title = TRANSMISSION
 	desc = mem_orila_ancient_protectors_encounter.11.desc
 	picture = GFX_evt_star_chart
 	location = ROOT
@@ -130,7 +130,7 @@ ship_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "ONSCREEN"
+		name = ONSCREEN
 		hidden_effect = {
 			owner = { country_event = { id = mem_orila_ancient_protectors_encounter.12 } }
 		}
@@ -143,7 +143,7 @@ ship_event = {
 # Ancient Protector Station Transmission
 country_event = {
 	id = mem_orila_ancient_protectors_encounter.12
-	title = "TRANSMISSION"
+	title = TRANSMISSION
 	desc = mem_orila_ancient_protectors_encounter.12.desc
 	
 	diplomatic = yes

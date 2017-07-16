@@ -1,15 +1,12 @@
 ﻿l_english:
  
- ########################
- # Ancient Protectors
- # Code by Malthus
- ########################
+ # First Contact Ancient Protectors
+ mem_orila_ancient_protectors_encounter.1.name:0 "Unknown Objects"
+ mem_orila_ancient_protectors_encounter.1.desc:0 "Our ships have discovered numerous vessels of unknown design orbiting multiple planets in the [From.From.From.GetName] system. One these planets seems to be protected by a planetary shield. So far there is no sign of hostility."
  
- mem_orila_ancient_protectors_encounter.1.name
- mem_orila_ancient_protectors_encounter.1.desc
- mem_orila_ancient_protectors_encounter.1.a
+ # Transmission from the Ancient Protector Station incoming
+ mem_orila_ancient_protectors_encounter.11.desc:0 "We are being hailed by the mysterious installation in the [From.GetName] system."
+ mem_orila_ancient_protectors_encounter.11.b:0 "Ignore it."
  
- mem_orila_ancient_protectors_encounter.11.name
- mem_orila_ancient_protectors_encounter.11.desc
- mem_orila_ancient_protectors_encounter.11.b
- 
+ # Ancient Protector Station Transmission
+ mem_orila_ancient_protectors_encounter.12.desc:0 ""

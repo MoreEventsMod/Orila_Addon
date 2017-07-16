@@ -104,6 +104,11 @@ create_mem_orila_country = {
 			}
 		}
 		last_created_country = {
+			set_policy = {
+				policy = artificial_intelligence_policy
+				option = ai_full_rights
+				cooldown = yes
+			}
 			set_graphical_culture = mem_ancient_01
 			add_modifier = {
 				modifier = "mem_orila_border"	

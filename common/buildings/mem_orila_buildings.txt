@@ -1,0 +1,98 @@
+building_mem_orila_cloning_lab = {
+	icon = "mem_orila_cloning_lab"
+	is_listed = no
+	
+	requires_pop = yes
+	
+	cost = {
+	}
+
+	required_resources = {
+		energy = 4
+	}
+	
+	produced_resources = {
+		society_research = 8
+	}
+	
+	planet_modifier = {
+		pop_growth_speed = 0.15
+	}
+	
+	upgrades = {
+	}
+	
+	ai_replace = no
+	event_building = yes
+}
+
+#Orila Science Center
+building_mem_orila_lab = {
+	icon = "mem_orila_lab"
+	is_listed = no
+	
+	requires_pop = yes
+	
+	cost = {
+	}
+
+	required_resources = {
+		energy = 4
+	}
+	
+	produced_resources = {
+		engineering_research = 8
+		society_research = 8
+		physics_research = 8
+	}
+	
+	upgrades = {
+	}
+	
+	ai_replace = no
+	event_building = yes
+}
+
+#Orila Science Center Gift
+building_mem_orila_lab_gift = {
+	icon = "mem_orila_lab"
+	
+	empire_unique = yes
+
+	requires_pop = yes
+	
+	cost = {
+		minerals = 1000
+	}
+	
+	
+	potential = {
+		planet.owner = {
+			has_country_flag = mem_orila_lab_gift
+		}
+	}
+
+	required_resources = {
+		energy = 4
+	}
+	
+	produced_resources = {
+		engineering_research = 8
+		society_research = 8
+		physics_research = 8
+	}
+	
+	upgrades = {
+	}
+	
+	ai_weight = {
+		weight = 700
+		modifier = {
+			weight = 0
+			from = { sector_controlled = yes }
+		}
+	}
+	
+	ai_replace = no
+	event_building = yes
+}

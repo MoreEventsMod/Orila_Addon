@@ -1,0 +1,14 @@
+﻿l_english:
+ 
+ ########################
+ # Orila Armies
+ # Code by Malthus
+ ########################
+ 
+ mem_orila_robot_army:0 "Warbot Army"
+ mem_orila_robot_army_plural:0 "Warbot Armies"
+ mem_orila_robot_army:0 "These machines of war are the product of ancient technology, far beyond what we can produce ourselves."
+ 
+ clone_army:0 "Advanced Clone Army"
+ clone_army_plural:0 "Advanced Clone Armies"
+ clone_army_desc:0 "Advanced vat-grown clones that reach adulthood in a matter of months. With a natural lifespan of less than a decade, their lack of personal initiative is deemed an acceptable trade-off for their total obedience to officers."

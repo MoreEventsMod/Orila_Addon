@@ -1,0 +1,18 @@
+﻿l_english:
+ 
+ ########################
+ # Orila Event Buildings
+ # Code by Malthus
+ ########################
+ 
+ # Orila Science Center
+ building_mem_orila_lab:0 "Precursor Science Center"
+ building_mem_orila_lab_desc:0 "An ancient and highly advanced center of research. Its technology may be thousands of years ahead of our own..."
+ 
+ # Orila Science Center Gift
+ building_mem_orila_lab_gift:0 "Precursor Science Center"
+ building_mem_orila_lab_gift_desc:0 "A highly advanced center of research given to us by the Orila. Its technology may be thousands of years ahead of our own..."
+ 
+ # Orila Cloning Facility
+ building_mem_orila_cloning_lab:0 "Precursor Cloning Facility"
+ building_mem_orila_cloning_lab_desc:0 "An ancient and highly advanced facility capable of cloning vast numbers of individuals in short time. Its technology may be thousands of years ahead of our own..."
