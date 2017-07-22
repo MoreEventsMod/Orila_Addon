@@ -1,43 +1,122 @@
 # Checks if Ancient_Protectors country (global event target) exists
 # Creates the country and saves it if it does not
 create_mem_ancient_protector_country = {
-	if = {
+	IF = {
 		limit = {
 			NOT = {
-				exists = event_target:mem_ancient_protector_country
+				has_global_flag = mem_ancient_protector_country_1
 			}
 		}
-		create_country = {
-			name = "NAME_Ancient_Protectors"
-			name_list = "ORILA"
-			species = random
-			type = mem_ancient_protectors
-			flag = {
-				icon = {
-					category = "blocky"
-					file = "flag_blocky_16.dds"
-				}
-				background = {
-					category = "backgrounds"
-					file = "mem_orila_stripes.dds"
-				}
-				colors = {
-					"grey"
-					"beige"
-					"null"
-					"null"
-				}
-			}
-		}
+		create_mem_drone_country = yes
 		last_created_country = {
-			add_modifier = {
-				modifier = "mem_orila_border"	
-				days = -1
-			}
+			set_country_flag = mem_ancient_protector_country_1
 			save_global_event_target_as = mem_ancient_protector_country
+		}
+		ELSE = {
+			IF = {
+				limit = {
+					NOT = {
+						has_global_flag = mem_ancient_protector_country_2
+					}
+				}
+				create_mem_drone_country = yes
+				last_created_country = {
+					set_country_flag = mem_ancient_protector_country_2
+					save_global_event_target_as = mem_ancient_protector_country
+				}
+				ELSE = {
+					IF = {
+						limit = {
+							NOT = {
+								has_global_flag = mem_ancient_protector_country_3
+							}
+						}
+						create_mem_drone_country = yes
+						last_created_country = {
+							set_country_flag = mem_ancient_protector_country_3
+							save_global_event_target_as = mem_ancient_protector_country
+						}
+						ELSE = {
+							IF = {
+								limit = {
+									NOT = {
+										has_global_flag = mem_ancient_protector_country_4
+									}
+								}
+								create_mem_drone_country = yes
+								last_created_country = {
+									set_country_flag = mem_ancient_protector_country_4
+									save_global_event_target_as = mem_ancient_protector_country
+								}
+								ELSE = {
+									IF = {
+										limit = {
+											NOT = {
+												has_global_flag = mem_ancient_protector_country_5
+											}
+										}
+										create_mem_drone_country = yes
+										last_created_country = {
+											set_country_flag = mem_ancient_protector_country_5
+											save_global_event_target_as = mem_ancient_protector_country
+										}
+										ELSE = {
+											IF = {
+												limit = {
+													NOT = {
+														has_global_flag = mem_ancient_protector_country_6
+													}
+												}
+												create_mem_drone_country = yes
+												last_created_country = {
+													set_country_flag = mem_ancient_protector_country_6
+													save_global_event_target_as = mem_ancient_protector_country
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
+
+create_mem_drone_country = {
+	create_country = {
+		name = "Ancient Protectors"
+		name_list = "ORILA"
+		species = random
+		type = mem_ancient_protectors
+		flag = {
+			icon = {
+				category = "blocky"
+				file = "flag_blocky_16.dds"
+			}
+			background = {
+				category = "backgrounds"
+				file = "mem_orila_stripes.dds"
+			}
+			colors = {
+				"grey"
+				"dark_grey"
+				"null"
+				"null"
+			}
+		}
+	}
+	last_created_country = {
+		add_modifier = {
+			modifier = "mem_orila_border"	
+			days = -1
+		}
+		set_country_flag = mem_ancient_protector_country
+	}
+}
+
 
 create_mem_orila_country = {
 	if = {
@@ -60,7 +139,7 @@ create_mem_orila_country = {
 			extra_trait_points = 3
 		}
 		create_country = {
-			name = "NAME_Council_of_Halissos"
+			name = "Council of Halissos"
 			name_list = "ORILA"
 			type = mem_orila
 			ignore_initial_colony_error = yes

@@ -305,6 +305,36 @@ mem_orila_homesystem = {
 					}
 					create_ship = {
 						name = random
+						design = "Sleipnir"
+						graphical_culture = last_created_country
+					}
+					create_ship = {
+						name = random
+						design = "Sleipnir"
+						graphical_culture = last_created_country
+					}
+					create_ship = {
+						name = random
+						design = "Fenrir"
+						graphical_culture = last_created_country
+					}
+					create_ship = {
+						name = random
+						design = "Fenrir"
+						graphical_culture = last_created_country
+					}
+					create_ship = {
+						name = random
+						design = "Fenrir"
+						graphical_culture = last_created_country
+					}
+					create_ship = {
+						name = random
+						design = "Fenrir"
+						graphical_culture = last_created_country
+					}
+					create_ship = {
+						name = random
 						design = "Fenrir"
 						graphical_culture = last_created_country
 					}
@@ -601,38 +631,6 @@ mem_orila_homesystem = {
 					module = "engineering_bay"
 				}					
 			}
-			create_fleet = {
-				settings = {
-					spawn_debris = no
-				}
-				effect = {
-					set_owner = last_created_country
-					create_ship = {
-						name = random
-						design = "Sleipnir"
-						graphical_culture = last_created_country
-					}
-					create_ship = {
-						name = random
-						design = "Fenrir"
-						graphical_culture = last_created_country
-					}
-					create_ship = {
-						name = random
-						design = "Fenrir"
-						graphical_culture = last_created_country
-					}
-					set_location = {
-						target = PREV
-						distance = 60
-						angle = random 
-					}
-					set_formation_scale = 2.5
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-				}
-			}
 			create_ambient_object = {
 				type = mem_planetary_shield_orila_ps_16
 				location = this
@@ -715,38 +713,6 @@ mem_orila_homesystem = {
 		random_system_planet = {
 			limit = {
 				is_star = yes
-			}
-			create_fleet = {
-				settings = {
-					spawn_debris = no
-				}
-				effect = {
-					set_owner = last_created_country
-					create_ship = {
-						name = random
-						design = "Sleipnir"
-						graphical_culture = last_created_country
-					}
-					create_ship = {
-						name = random
-						design = "Fenrir"
-						graphical_culture = last_created_country
-					}
-					create_ship = {
-						name = random
-						design = "Fenrir"
-						graphical_culture = last_created_country
-					}
-					set_location = {
-						target = PREV
-						distance = 10
-						angle = 0 
-					}
-					set_formation_scale = 2.5
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-				}
 			}
 			create_fleet = {
 				settings = {

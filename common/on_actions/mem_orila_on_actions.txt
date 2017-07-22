@@ -11,7 +11,7 @@ on_first_contact = {
 # FromFromFrom = fleet 2
 on_entering_battle = {
 	events = {
-		mem_orila_ancient_protectors_encounter.4
+#		mem_orila_ancient_protectors_encounter.4
 	}
 }
 

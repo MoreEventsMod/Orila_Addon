@@ -20,13 +20,13 @@ country_event = {
 	immediate = {
 		set_country_flag = mem_ancient_protectors_encountered
 		capital_scope = { save_event_target_as = pc_home }
-#		from = {
-#			enable_special_project = {
-#				name = MEM_INVESTIGATE_ANCIENT_PROTECTORS
-#				location = event_target:pc_home
-#				owner = ROOT
-#			}
-#		}
+		from = {
+			enable_special_project = {
+				name = MEM_INVESTIGATE_ANCIENT_PROTECTORS
+				location = event_target:pc_home
+				owner = ROOT
+			}
+		}
 	}
 	
 	option = {
@@ -144,7 +144,18 @@ ship_event = {
 country_event = {
 	id = mem_orila_ancient_protectors_encounter.12
 	title = TRANSMISSION
-	desc = mem_orila_ancient_protectors_encounter.12.desc
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				mem_orila_ancient_protector_station_malfuction = { text = mem_orila_ancient_protectors_encounter.12.desc.2 }
+				mem_orila_ancient_protector_station_corrupted = { text = mem_orila_ancient_protectors_encounter.12.desc.3 }
+				default = { text = mem_orila_ancient_protectors_encounter.12.desc.1 }
+			}
+		}
+	}
+	
+	
 	
 	diplomatic = yes
 	
@@ -159,8 +170,9 @@ country_event = {
 		response_text = mem_orila_ancient_protectors_encounter.12.a.response
 		is_dialog_only = yes
 		trigger = {
-			NOT = {
+			NOR = {
 				has_country_flag = mem_orila_ancient_protector_station_malfuction
+				has_country_flag = mem_orila_ancient_protector_station_corrupted
 			}
 		}
 	}
@@ -169,8 +181,9 @@ country_event = {
 		response_text = mem_orila_ancient_protectors_encounter.12.b.response
 		is_dialog_only = yes
 		trigger = {
-			NOT = {
+			NOR = {
 				has_country_flag = mem_orila_ancient_protector_station_malfuction
+				has_country_flag = mem_orila_ancient_protector_station_corrupted
 			}
 		}
 	}
@@ -178,9 +191,13 @@ country_event = {
 		name = mem_orila_ancient_protectors_encounter.12.c
 		response_text = mem_orila_ancient_protectors_encounter.12.c.response
 		trigger = {
-			NOT = {
+			NOR = {
 				has_country_flag = mem_orila_ancient_protector_station_malfuction
+				has_country_flag = mem_orila_ancient_protector_station_corrupted
 			}
+		}
+		hidden_effect = {
+			set_country_flag = mem_orila_ancient_protector_station_builder
 		}
 	}
 	option = {
@@ -188,7 +205,11 @@ country_event = {
 		response_text = mem_orila_ancient_protectors_encounter.12.d.response
 		is_dialog_only = yes
 		trigger = {
-			has_country_flag = mem_orila_ancient_protector_station_malfuction
+			has_country_flag = mem_orila_ancient_protector_station_builder
+			NOR = {
+				has_country_flag = mem_orila_ancient_protector_station_malfuction
+				has_country_flag = mem_orila_ancient_protector_station_corrupted
+			}
 		}
 	}
 	option = {
@@ -196,7 +217,10 @@ country_event = {
 		response_text = mem_orila_ancient_protectors_encounter.12.e.response
 		is_dialog_only = yes
 		trigger = {
-			has_country_flag = mem_orila_ancient_protector_station_malfuction
+			NOR = {
+				has_country_flag = mem_orila_ancient_protector_station_malfuction
+				has_country_flag = mem_orila_ancient_protector_station_corrupted
+			}
 		}
 	}
 	option = {
@@ -216,7 +240,12 @@ country_event = {
 
 	immediate = {
 		every_country = {
-			limit = { is_country_type = mem_ancient_protectors }
+			limit = { 
+				OR = (
+					is_country_type = mem_ancient_protectors
+					is_country_type = mem_orila
+				}
+			}
 			establish_communications_no_message = ROOT
 		}
 		country_event = { id = mem_orila_ancient_protectors_encounter.3 }

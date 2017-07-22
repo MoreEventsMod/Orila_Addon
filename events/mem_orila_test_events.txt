@@ -9,40 +9,46 @@ country_event = {
 	immediate = {
 		capital_scope = {
 			solar_system = {
-				# spawn_system = {
-					# min_distance = 10
-					# max_distance = 30
-					# initializer = "mem_orila_primitive_system_ikor"
-				# }
-				# spawn_system = {
-					# min_distance = 10
-					# max_distance = 30
-					# initializer = "mem_orila_primitive_system_qastliani"
-				# }
-				# spawn_system = {
-					# min_distance = 10
-					# max_distance = 30
-					# initializer = "mem_orila_primitive_system_reshtar"
-				# }
-				# spawn_system = {
-					# min_distance = 10
-					# max_distance = 30
-					# initializer = "mem_orila_primitive_system_random"
-				# }
-				# spawn_system = {
-					# min_distance = 10
-					# max_distance = 30
-					# initializer = "mem_orila_primitive_system_random"
-				# }
+#				create_mem_ancient_protector_country = yes
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					initializer = "mem_orila_primitive_system_ikor"
+				}
+#				create_mem_ancient_protector_country = yes
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					initializer = "mem_orila_primitive_system_qastliani"
+				}
+#				create_mem_ancient_protector_country = yes
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					initializer = "mem_orila_primitive_system_reshtar"
+				}
+#				create_mem_ancient_protector_country = yes
 				spawn_system = {
 					min_distance = 10
 					max_distance = 30
 					initializer = "mem_orila_primitive_system_random"
 				}
+#				create_mem_ancient_protector_country = yes
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					initializer = "mem_orila_primitive_system_random"
+				}
+#				create_mem_ancient_protector_country = yes
 				spawn_system = {
 					min_distance = 10
 					max_distance = 30
 					initializer = "mem_orila_homesystem"
+				}
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					initializer = "mem_last_orila_2_system"
 				}
 			}
 		}

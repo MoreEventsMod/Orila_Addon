@@ -460,7 +460,7 @@ mem_orila_primitive_system_ikor = {
 			}
 			set_name = "Ikaan"
 			set_planet_flag = mem_orila_primitive_world
-			create_mem_ancient_protector_country = yes
+#			create_mem_ancient_protector_country = yes
 			event_target:mem_ancient_protector_country = {
 				create_fleet = {
 					settings = {
@@ -720,7 +720,7 @@ mem_orila_primitive_system_ikor = {
 				}
 				set_name = "Inarius"
 				set_planet_flag = mem_orila_primitive_world
-				create_mem_ancient_protector_country = yes
+#				create_mem_ancient_protector_country = yes
 				event_target:mem_ancient_protector_country = {
 					create_fleet = {
 						settings = {
