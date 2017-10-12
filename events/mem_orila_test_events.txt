@@ -1,7 +1,7 @@
-namespace = mem_orila_test
+namespace = mem_orila_addon_test
 
 country_event = {
-	id = mem_orila_test.1
+	id = mem_orila_addon_test.1
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -71,7 +71,7 @@ country_event = {
 }
 
 country_event = {
-	id = mem_orila_test.2
+	id = mem_orila_addon_test.2
 	hide_window = yes
 	
 	is_triggered_only = yes

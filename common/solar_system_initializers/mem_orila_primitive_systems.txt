@@ -55,11 +55,7 @@ mem_orila_primitive_system_ikor = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_deep_sinkhole"
-				add_resource = {
-					resource = engineering_research
-					amount = 1
-					replace = yes
-				}				
+				set_deposit = d_engineering_deposit				
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
@@ -68,20 +64,12 @@ mem_orila_primitive_system_ikor = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_dangerous_wildlife"
-				add_resource = {
-					resource = society_research
-					amount = 2
-					replace = yes
-				}				
+				set_deposit = d_society_deposit				
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_quicksand_basin"
-				add_resource = {
-					resource = energy
-					amount = 2
-					replace = yes
-				}					
+				set_deposit = d_rich_energy_deposit					
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
@@ -90,7 +78,7 @@ mem_orila_primitive_system_ikor = {
 			prevent_anomaly = yes
 			create_species = {
 				name = random
-				class = random
+				class = random_non_machine
 				portrait = random
 				homeworld = THIS
 				traits = {
@@ -229,11 +217,7 @@ mem_orila_primitive_system_ikor = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_active_volcano"
-				add_resource = {
-					resource = engineering_research
-					amount = 2
-					replace = yes
-				}				
+				set_deposit = d_rich_engineering_deposit				
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
@@ -242,20 +226,12 @@ mem_orila_primitive_system_ikor = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_dangerous_wildlife"
-				add_resource = {
-					resource = society_research
-					amount = 1
-					replace = yes
-				}				
+				set_deposit = d_society_deposit			
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_dangerous_wildlife"
-				add_resource = {
-					resource = energy
-					amount = 2
-					replace = yes
-				}					
+				set_deposit = d_rich_energy_deposit					
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
@@ -370,11 +346,7 @@ mem_orila_primitive_system_ikor = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"										
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}
 			}
 			if = {
@@ -405,11 +377,7 @@ mem_orila_primitive_system_ikor = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}						
 			}					
 			if = {
@@ -428,11 +396,7 @@ mem_orila_primitive_system_ikor = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}						
 			}	
 			random_tile = {
@@ -532,11 +496,7 @@ mem_orila_primitive_system_ikor = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_blocker = "tb_active_volcano"
-					add_resource = {
-						resource = engineering_research
-						amount = 2
-						replace = yes
-					}				
+					set_deposit = d_rich_engineering_deposit				
 				}
 				random_tile = {
 					limit = { has_blocker = no has_building = no }
@@ -545,20 +505,12 @@ mem_orila_primitive_system_ikor = {
 				random_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_blocker = "tb_dangerous_wildlife"
-					add_resource = {
-						resource = society_research
-						amount = 1
-						replace = yes
-					}				
+					set_deposit = d_society_deposit				
 				}
 				random_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_blocker = "tb_active_volcano"
-					add_resource = {
-						resource = energy
-						amount = 2
-						replace = yes
-					}					
+					set_deposit = d_rich_energy_deposit					
 				}
 				random_tile = {
 					limit = { has_blocker = no has_building = no }
@@ -568,7 +520,7 @@ mem_orila_primitive_system_ikor = {
 			init_effect = {
 				create_species = {
 					name = random
-					class = random
+					class = random_non_machine
 					portrait = random
 					homeworld = THIS
 					traits = {
@@ -653,11 +605,7 @@ mem_orila_primitive_system_ikor = {
 							has_grown_pop = yes
 						}
 						set_building = "building_primitive_farm"										
-						add_resource = {
-							resource = food
-							amount = 1
-							replace = yes
-						}
+						set_deposit = d_farmland_deposit
 					}
 				}
 				if = {
@@ -688,11 +636,7 @@ mem_orila_primitive_system_ikor = {
 							has_grown_pop = yes
 						}
 						set_building = "building_primitive_farm"
-						add_resource = {
-							resource = food
-							amount = 1
-							replace = yes
-						}
+						set_deposit = d_farmland_deposit
 					}						
 				}
 				random_tile = {
@@ -843,7 +787,7 @@ mem_orila_primitive_system_qastliani = {
 			prevent_anomaly = yes
 			create_species = {
 				name = random
-				class = random
+				class = random_non_machine
 				portrait = random
 				homeworld = THIS
 				traits = {
@@ -1030,11 +974,7 @@ mem_orila_primitive_system_qastliani = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"										
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}
 			}
 			if = {
@@ -1078,11 +1018,7 @@ mem_orila_primitive_system_qastliani = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}						
 			}					
 			if = {
@@ -1101,11 +1037,7 @@ mem_orila_primitive_system_qastliani = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}						
 			}
 			random_tile = {
@@ -1520,11 +1452,7 @@ mem_orila_primitive_system_reshtar = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"										
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}
 			}
 			if = {
@@ -1568,11 +1496,7 @@ mem_orila_primitive_system_reshtar = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}						
 			}					
 			if = {
@@ -1591,11 +1515,7 @@ mem_orila_primitive_system_reshtar = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}						
 			}
 			random_tile = {
@@ -1846,7 +1766,7 @@ mem_orila_primitive_system_random = {
 			prevent_anomaly = yes
 			create_species = {
 				name = random
-				class = random
+				class = random_non_machine
 				portrait = random
 				homeworld = THIS
 				traits = {
@@ -2033,11 +1953,7 @@ mem_orila_primitive_system_random = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"										
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}
 			}
 			if = {
@@ -2081,11 +1997,7 @@ mem_orila_primitive_system_random = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}						
 			}					
 			if = {
@@ -2104,11 +2016,7 @@ mem_orila_primitive_system_random = {
 						has_grown_pop = yes
 					}
 					set_building = "building_primitive_farm"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}
+					set_deposit = d_farmland_deposit
 				}						
 			}
 			random_tile = {
