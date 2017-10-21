@@ -83,3 +83,51 @@ country_event = {
 		}
 	}
 }
+
+planet_event = {
+	id = mem_orila_addon_test.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = {
+			set_country_flag = recently_advanced
+		}
+		random_tile = {
+			limit = {
+				has_blocker = no
+				has_grown_pop = no
+				has_growing_pop = no
+				has_building = no
+			}
+			set_building = "building_mem_planetary_shield_generator_orila"
+		}
+		set_planet_flag = mem_orila_primitive_world
+		create_mem_ancient_protector_country = yes
+		event_target:mem_ancient_protector_country = {
+			create_fleet = {
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = prev
+					create_ship = {
+						name = random
+						design = "Utgard"
+						graphical_culture = mem_ancient_01
+					}
+					set_location = {
+						target = prevprev
+						distance = 5
+						angle = random
+					}				
+				}
+			}
+		}
+		last_created_fleet = {
+			set_fleet_flag = mem_orila_ancient_protector_station
+		}
+		planet_event = { id = mem_planetary_shields.5 days = 1 }
+	}
+}
